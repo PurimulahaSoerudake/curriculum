@@ -1,0 +1,39 @@
+@media screen and (max-width: 767px){
+    .wrapper{
+        width: 300px;
+    }
+
+    .left{
+        width: 100px;
+    }
+
+    .right{
+        width: 200px;
+    }
+
+    .right-left{
+        width: 125px;
+    }
+
+    .right-right{
+        width: 75px;
+    }
+}
+
+@media screen and (max-width: 479px){
+
+    .wrapper{
+        width: 150px;
+    }
+
+    .left, .right, .right-right, .right-left{
+        float: none;
+    }
+
+    .left, .right-left-up, .right-left-under, .right-right, .right-under{
+        max-height: 100px;
+        width: 150px;
+    }
+
+
+}
