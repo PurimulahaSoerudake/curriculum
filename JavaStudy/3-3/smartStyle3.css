@@ -1,0 +1,42 @@
+@media screen and (max-width: 479px){
+    .wrapper{
+        width: 200px;
+    }
+
+    .header{
+        height: 200px;
+    }
+
+    .h-box-right, .h-box-center, .h-box-left{
+        float: none;
+        position: relative;
+        top:20px;
+        left: 70px;
+    }
+
+    .h-box-center{
+        border: solid 10px #ffffff;
+        border-top: none;
+        border-bottom: none;
+    }
+
+    .left, .right{
+        float: none;
+        width: 200px;
+    }
+
+    .left{
+        height: 100px;
+    }
+
+    .right{
+        height: 210px;
+    }
+
+    .r-box-up, .r-box-center, .r-box-under{
+        top: 20px;
+        left: 30px;
+    }
+
+
+}
