@@ -2,8 +2,9 @@ package check;
 import constants.Constants;
 
 public class Check {
-    private static final String firstName = "Shimono";
-    private static final String lastName = "Yudai";
+    //定数は大文字
+    private static final String firstName = "Yudai";
+    private static final String lastName = "Shimono";
 
     private static void printName(String first_Name,String last_Name) {
         System.out.println(first_Name + last_Name);
