@@ -11,10 +11,5 @@ let car = {
     num: 1234
 }
 
-for(var c in car){
-    if(c === "gass"){
-        console.log("ガソリンは" + car[c] + "です");
-    }else if(c === "num"){
-        console.log("ナンバーは" + car[c] + "です");
-    }
-}
+console.log(`ガソリンは${car.gass}です`);
+console.log(`ナンバーは${car.num}です`);
