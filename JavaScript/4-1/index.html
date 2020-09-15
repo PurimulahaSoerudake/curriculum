@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="app">
+        <p>残タスク数 : {{tasklength}} / {{list.length}}</p>
+        <input type="text" v-model="addText" placeholder="ToDoを入力して">
+        <button @click="addToDo()">追加</button>
+        <button @click="deleteBtn()">削除</button><br>
+        <input type="text" v-model="searchword" placeholder="キーワードを入力して">
+        <hr>
+        <!-- 検索キーワードが入力されていない -->
+        <span v-if="!searchword">
+            <!-- リストが空 -->
+            <span v-if="list.length === 0">
+                <p>現在タスクはありません</p>
+            </span>
+            <!-- リストがある -->
+            <span v-else>
+                <ul v-for="todo in list">
+                    <li>
+                        <span v-bind:class="{done: todo.isChecked}">
+                            <input type="checkbox" v-model="todo.isChecked">{{ todo.text }}
+                        </span>
+                    </li>
+                </ul>
+            </span>
+        </span>
+        <!-- 検索キーワードが入力されている -->
+        <span v-else>
+            <!-- リストが空 -->
+            <span v-if="searchlist.length === 0">
+                <p>検索結果なし</p>
+            </span>
+            <!-- リストがある -->
+            <span else>
+                <ul v-for="todo in searchlist">
+                    <li>
+                        <span v-bind:class="{done: todo.isChecked}">
+                            <input type="checkbox" v-model="todo.isChecked">{{ todo.text }}
+                        </span>
+                    </li>
+                </ul>
+            </span>
+        </span>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
